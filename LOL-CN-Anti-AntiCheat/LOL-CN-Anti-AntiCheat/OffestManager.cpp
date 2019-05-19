@@ -8,13 +8,15 @@ using encoder = encstr::cbc_t<encstr::ciphers::xor_cipher_t>;
 OffestManager::OffestManager()
 	:_current_game_version_(ENCRYPT_STRING_AUTO_W(encoder, L"9.10.273.9316"))
 	, _user_game_version_(L"")
-{}
+{
+	SetUserGameVersion();
+}
 
 
 OffestManager::~OffestManager()
 = default;
 
-bool OffestManager::IsGameMainModified()
+bool OffestManager::IsGameMainModified() const
 {
 	return GetCurrentGameVersion() == GetUserGameVersion();
 }

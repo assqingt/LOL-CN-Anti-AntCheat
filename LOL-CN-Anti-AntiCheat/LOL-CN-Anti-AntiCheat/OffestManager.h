@@ -10,7 +10,7 @@ public:
 
 
 public:
-	bool IsGameMainModified();
+	bool IsGameMainModified() const;
 
 private:
 	void SetUserGameVersion();
