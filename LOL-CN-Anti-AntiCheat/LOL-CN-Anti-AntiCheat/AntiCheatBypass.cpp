@@ -1,5 +1,6 @@
-#include "AntiCheatBypass.h"
+#include <AntiCheatBypass.h>
 
+//tcj要处理的
 //NtSetInformationThread
 //RtlMoveMemory
 //NtQueryInformationProcess

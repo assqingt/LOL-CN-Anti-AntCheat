@@ -16,6 +16,39 @@
     <Filter Include="BaseLib">
       <UniqueIdentifier>{4d1b8499-c178-4b99-b217-874a9147d33e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="BaseLib\bee">
+      <UniqueIdentifier>{65902621-4d70-485c-8f2a-de5606d0dbc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BaseLib\bee\error">
+      <UniqueIdentifier>{77dfa96c-5f25-42e7-8494-bf4174e18a26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BaseLib\bee\fsevent">
+      <UniqueIdentifier>{c78dd24c-39f5-4b1b-bd6e-815b179ab07f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BaseLib\bee\lua">
+      <UniqueIdentifier>{5d5f3db7-45d6-4b34-92ca-75a75e126802}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BaseLib\bee\net">
+      <UniqueIdentifier>{eb4c6ce1-290a-41b8-98b3-3ad0232216f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BaseLib\bee\nonstd">
+      <UniqueIdentifier>{05b96345-1999-4352-992b-72961157df0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BaseLib\bee\platform">
+      <UniqueIdentifier>{01d04d92-85ff-4ecc-97ab-d68618fb80f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BaseLib\bee\registry">
+      <UniqueIdentifier>{f6a0783a-cd3b-4a71-b970-e7a5b4caaf6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BaseLib\bee\subprocess">
+      <UniqueIdentifier>{bb41f82e-c6fa-4770-8852-af725b4b7ba3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BaseLib\bee\utility">
+      <UniqueIdentifier>{93ab7549-10cf-4f6c-aa9f-b4de78fdf419}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utility">
+      <UniqueIdentifier>{7a60ecfa-3fa3-4034-ac85-4d380b8932d1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -33,6 +66,135 @@
     <ClInclude Include="AntiCheatBypass.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="OffestManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\config.h">
+      <Filter>BaseLib\bee</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\error.h">
+      <Filter>BaseLib\bee</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\filesystem.h">
+      <Filter>BaseLib\bee</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\fsevent.h">
+      <Filter>BaseLib\bee</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\platform.h">
+      <Filter>BaseLib\bee</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\subprocess.h">
+      <Filter>BaseLib\bee</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\error\category_win.h">
+      <Filter>BaseLib\bee\error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\error\exception.h">
+      <Filter>BaseLib\bee\error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\fsevent\fsevent_linux.h">
+      <Filter>BaseLib\bee\fsevent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\fsevent\fsevent_osx.h">
+      <Filter>BaseLib\bee\fsevent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\fsevent\fsevent_win.h">
+      <Filter>BaseLib\bee\fsevent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\lua\binding.h">
+      <Filter>BaseLib\bee\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\lua\file.h">
+      <Filter>BaseLib\bee\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\lua\path.h">
+      <Filter>BaseLib\bee\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\lua\range.h">
+      <Filter>BaseLib\bee\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\net\endpoint.h">
+      <Filter>BaseLib\bee\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\net\socket.h">
+      <Filter>BaseLib\bee\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\net\unixsocket_win.h">
+      <Filter>BaseLib\bee\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\subprocess\args_helper.h">
+      <Filter>BaseLib\bee\subprocess</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\subprocess\sharedmemory_win.h">
+      <Filter>BaseLib\bee\subprocess</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\subprocess\subprocess_posix.h">
+      <Filter>BaseLib\bee\subprocess</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\subprocess\subprocess_win.h">
+      <Filter>BaseLib\bee\subprocess</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\registry\exception.h">
+      <Filter>BaseLib\bee\registry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\registry\key.h">
+      <Filter>BaseLib\bee\registry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\registry\predefined_keys.h">
+      <Filter>BaseLib\bee\registry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\registry\traits.h">
+      <Filter>BaseLib\bee\registry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\registry\value.h">
+      <Filter>BaseLib\bee\registry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\platform\version.h">
+      <Filter>BaseLib\bee\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\nonstd\dynarray.h">
+      <Filter>BaseLib\bee\nonstd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\nonstd\expected.h">
+      <Filter>BaseLib\bee\nonstd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\nonstd\filesystem.h">
+      <Filter>BaseLib\bee\nonstd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\nonstd\span.h">
+      <Filter>BaseLib\bee\nonstd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\utility\file_helper.h">
+      <Filter>BaseLib\bee\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\utility\format.h">
+      <Filter>BaseLib\bee\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\utility\hybrid_array.h">
+      <Filter>BaseLib\bee\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\utility\lockqueue.h">
+      <Filter>BaseLib\bee\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\utility\module_version_win.h">
+      <Filter>BaseLib\bee\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\utility\path_helper.h">
+      <Filter>BaseLib\bee\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\utility\semaphore.h">
+      <Filter>BaseLib\bee\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\utility\unicode_win.h">
+      <Filter>BaseLib\bee\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\noncopyable.h">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\singleton.h">
+      <Filter>utility</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -46,6 +208,60 @@
     </ClCompile>
     <ClCompile Include="AntiCheatBypass.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="OffestManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenSource\bee\error.cpp">
+      <Filter>BaseLib\bee</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenSource\bee\error\category_win.cpp">
+      <Filter>BaseLib\bee\error</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenSource\bee\error\exception.cpp">
+      <Filter>BaseLib\bee\error</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenSource\bee\fsevent\fsevent_linux.cpp">
+      <Filter>BaseLib\bee\fsevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenSource\bee\fsevent\fsevent_osx.cpp">
+      <Filter>BaseLib\bee\fsevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenSource\bee\fsevent\fsevent_win.cpp">
+      <Filter>BaseLib\bee\fsevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenSource\bee\net\endpoint.cpp">
+      <Filter>BaseLib\bee\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenSource\bee\net\socket.cpp">
+      <Filter>BaseLib\bee\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenSource\bee\net\unixsocket_win.cpp">
+      <Filter>BaseLib\bee\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenSource\bee\subprocess\sharedmemory_win.cpp">
+      <Filter>BaseLib\bee\subprocess</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenSource\bee\subprocess\subprocess_posix.cpp">
+      <Filter>BaseLib\bee\subprocess</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenSource\bee\subprocess\subprocess_win.cpp">
+      <Filter>BaseLib\bee\subprocess</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenSource\bee\platform\version_win.cpp">
+      <Filter>BaseLib\bee\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenSource\bee\utility\file_helper.cpp">
+      <Filter>BaseLib\bee\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenSource\bee\utility\module_version_win.cpp">
+      <Filter>BaseLib\bee\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenSource\bee\utility\path_helper.cpp">
+      <Filter>BaseLib\bee\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenSource\bee\utility\unicode_win.cpp">
+      <Filter>BaseLib\bee\utility</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

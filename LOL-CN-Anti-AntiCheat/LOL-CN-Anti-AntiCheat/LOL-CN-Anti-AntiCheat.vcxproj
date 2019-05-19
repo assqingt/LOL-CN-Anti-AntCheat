@@ -92,17 +92,96 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\OpenSource\bee\config.h" />
+    <ClInclude Include="..\OpenSource\bee\error.h" />
+    <ClInclude Include="..\OpenSource\bee\error\category_win.h" />
+    <ClInclude Include="..\OpenSource\bee\error\exception.h" />
+    <ClInclude Include="..\OpenSource\bee\filesystem.h" />
+    <ClInclude Include="..\OpenSource\bee\fsevent.h" />
+    <ClInclude Include="..\OpenSource\bee\fsevent\fsevent_linux.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\fsevent\fsevent_osx.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\fsevent\fsevent_win.h" />
+    <ClInclude Include="..\OpenSource\bee\lua\binding.h" />
+    <ClInclude Include="..\OpenSource\bee\lua\file.h" />
+    <ClInclude Include="..\OpenSource\bee\lua\path.h" />
+    <ClInclude Include="..\OpenSource\bee\lua\range.h" />
+    <ClInclude Include="..\OpenSource\bee\net\endpoint.h" />
+    <ClInclude Include="..\OpenSource\bee\net\socket.h" />
+    <ClInclude Include="..\OpenSource\bee\net\unixsocket_win.h" />
+    <ClInclude Include="..\OpenSource\bee\nonstd\dynarray.h" />
+    <ClInclude Include="..\OpenSource\bee\nonstd\expected.h" />
+    <ClInclude Include="..\OpenSource\bee\nonstd\filesystem.h" />
+    <ClInclude Include="..\OpenSource\bee\nonstd\span.h" />
+    <ClInclude Include="..\OpenSource\bee\platform.h" />
+    <ClInclude Include="..\OpenSource\bee\platform\version.h" />
+    <ClInclude Include="..\OpenSource\bee\registry\exception.h" />
+    <ClInclude Include="..\OpenSource\bee\registry\key.h" />
+    <ClInclude Include="..\OpenSource\bee\registry\predefined_keys.h" />
+    <ClInclude Include="..\OpenSource\bee\registry\traits.h" />
+    <ClInclude Include="..\OpenSource\bee\registry\value.h" />
+    <ClInclude Include="..\OpenSource\bee\subprocess.h" />
+    <ClInclude Include="..\OpenSource\bee\subprocess\args_helper.h" />
+    <ClInclude Include="..\OpenSource\bee\subprocess\sharedmemory_win.h" />
+    <ClInclude Include="..\OpenSource\bee\subprocess\subprocess_posix.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\OpenSource\bee\subprocess\subprocess_win.h" />
+    <ClInclude Include="..\OpenSource\bee\utility\file_helper.h" />
+    <ClInclude Include="..\OpenSource\bee\utility\format.h" />
+    <ClInclude Include="..\OpenSource\bee\utility\hybrid_array.h" />
+    <ClInclude Include="..\OpenSource\bee\utility\lockqueue.h" />
+    <ClInclude Include="..\OpenSource\bee\utility\module_version_win.h" />
+    <ClInclude Include="..\OpenSource\bee\utility\path_helper.h" />
+    <ClInclude Include="..\OpenSource\bee\utility\semaphore.h" />
+    <ClInclude Include="..\OpenSource\bee\utility\unicode_win.h" />
     <ClInclude Include="AntiCheatBypass.h" />
     <ClInclude Include="dll_module.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="LOLClient.h" />
     <ClInclude Include="ntdll.h" />
+    <ClInclude Include="OffestManager.h" />
+    <ClInclude Include="utility\noncopyable.h" />
+    <ClInclude Include="utility\singleton.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\OpenSource\bee\error.cpp" />
+    <ClCompile Include="..\OpenSource\bee\error\category_win.cpp" />
+    <ClCompile Include="..\OpenSource\bee\error\exception.cpp" />
+    <ClCompile Include="..\OpenSource\bee\fsevent\fsevent_linux.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\OpenSource\bee\fsevent\fsevent_osx.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\OpenSource\bee\fsevent\fsevent_win.cpp" />
+    <ClCompile Include="..\OpenSource\bee\net\endpoint.cpp" />
+    <ClCompile Include="..\OpenSource\bee\net\socket.cpp" />
+    <ClCompile Include="..\OpenSource\bee\net\unixsocket_win.cpp" />
+    <ClCompile Include="..\OpenSource\bee\platform\version_win.cpp" />
+    <ClCompile Include="..\OpenSource\bee\subprocess\sharedmemory_win.cpp" />
+    <ClCompile Include="..\OpenSource\bee\subprocess\subprocess_posix.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\OpenSource\bee\subprocess\subprocess_win.cpp" />
+    <ClCompile Include="..\OpenSource\bee\utility\file_helper.cpp" />
+    <ClCompile Include="..\OpenSource\bee\utility\module_version_win.cpp" />
+    <ClCompile Include="..\OpenSource\bee\utility\path_helper.cpp" />
+    <ClCompile Include="..\OpenSource\bee\utility\unicode_win.cpp" />
     <ClCompile Include="AntiCheatBypass.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="dll_module.cpp" />
     <ClCompile Include="LOLClient.cpp" />
+    <ClCompile Include="OffestManager.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

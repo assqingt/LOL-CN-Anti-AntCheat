@@ -5,6 +5,10 @@ class LOLClient
 public:
 	LOLClient();
 	~LOLClient();
+
+	//基本信息
+	uintptr_t GetGameMainPid() const;
+	fs::path GetGameMainFullPath();
 	//名字
 	[[nodiscard]] auto GetGameLobbyName() const -> std::wstring;
 	[[nodiscard]] auto GetGameMainName() const -> std::wstring;
@@ -32,18 +36,20 @@ public:
 	//HWID
 	[[nodiscard]] auto GetPolicyProbeBase() const -> uintptr_t;
 public:
-	//name
-	const std::wstring _game_lobby_name;
-	const std::wstring _game_main_name;
-	const std::wstring _lol_base_name;
-	const std::wstring _ter_safe_name;
-	const std::wstring _ten_rpcs_name;
-	const std::wstring _ten_slx_name;
-	const std::wstring _tcj_name;
-	const std::wstring _game_rpcs_name;
-	const std::wstring _policy_probe_name;
-	
+
 private:
+	void SetGameFullPath();
+private:
+	//Name
+	const std::wstring _game_lobby_name_;
+	const std::wstring _game_main_name_;
+	const std::wstring _lol_base_name_;
+	const std::wstring _ter_safe_name_;
+	const std::wstring _ten_rpcs_name_;
+	const std::wstring _ten_slx_name_;
+	const std::wstring _tcj_name_;
+	const std::wstring _game_rpcs_name_;
+	const std::wstring _policy_probe_name_;
 
 	//HMODULE
 	uintptr_t _game_lobby_handle_;
@@ -56,9 +62,15 @@ private:
 	uintptr_t _game_rpcs_handle_;
 	uintptr_t _policy_probe_handle_;
 
+	//Basic Info
+	fs::path _game_main_full_path_;
+	uintptr_t _game_main_pid_;
 
 
 
 
 };
+extern LOLClient g_lol_client;
+
+LOLClient& get_lol_client();
 
