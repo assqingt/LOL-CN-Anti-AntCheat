@@ -8,6 +8,13 @@ using encoder = encstr::cbc_t<encstr::ciphers::xor_cipher_t>;
 OffestManager::OffestManager()
 	:_current_game_version_(ENCRYPT_STRING_AUTO_W(encoder, L"9.10.273.9316"))
 	, _user_game_version_(L"")
+
+	//下面是基址
+
+	, lol_base_self_exception_trig_thread_entry_offest(static_cast<uintptr_t>(0x1681FAC))
+	, _ter_safe_game_code_hash_thread_entry_offest(static_cast<uintptr_t>(0xE3530))
+	
+
 {
 	SetUserGameVersion();
 }
@@ -15,6 +22,23 @@ OffestManager::OffestManager()
 
 OffestManager::~OffestManager()
 = default;
+
+void OffestManager::Init()
+{
+
+
+}
+uintptr_t OffestManager::GetSelfExceptionTrigThreadEntryAddr() const
+{
+	auto& v_lol_client = get_lol_client();
+	return v_lol_client.GetLOLBase() + lol_base_self_exception_trig_thread_entry_offest;
+}
+
+uintptr_t OffestManager::GetGlobalGameHashThreadEntryAddr() const
+{
+	auto& v_lol_client = get_lol_client();
+	return v_lol_client.GetTerSafeBase() + _ter_safe_game_code_hash_thread_entry_offest;
+}
 
 bool OffestManager::IsGameMainModified() const
 {
