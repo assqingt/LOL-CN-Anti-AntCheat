@@ -442,7 +442,7 @@
 
 #if defined(__clang__)
   #define ASMJIT_BEGIN_NAMESPACE                                              \
-    namespace asmjit {                                                        \
+    namespace asmjitself {                                                        \
       _Pragma("clang diagnostic push")                                        \
       _Pragma("clang diagnostic ignored \"-Wconstant-logical-operand\"")      \
       _Pragma("clang diagnostic ignored \"-Wunnamed-type-template-args\"")
@@ -452,7 +452,7 @@
 #elif ASMJIT_CXX_GNU >= ASMJIT_CXX_MAKE_VER(4, 0, 0) && \
       ASMJIT_CXX_GNU <  ASMJIT_CXX_MAKE_VER(5, 0, 0)
   #define ASMJIT_BEGIN_NAMESPACE                                              \
-    namespace asmjit {                                                        \
+    namespace asmjitself {                                                        \
       _Pragma("GCC diagnostic push")                                          \
       _Pragma("GCC diagnostic ignored \"-Wmissing-field-initializers\"")
   #define ASMJIT_END_NAMESPACE                                                \
@@ -460,7 +460,7 @@
     }
 #elif ASMJIT_CXX_GNU >= ASMJIT_CXX_MAKE_VER(8, 0, 0)
   #define ASMJIT_BEGIN_NAMESPACE                                              \
-    namespace asmjit {                                                        \
+    namespace asmjitself {                                                        \
       _Pragma("GCC diagnostic push")                                          \
       _Pragma("GCC diagnostic ignored \"-Wclass-memaccess\"")
   #define ASMJIT_END_NAMESPACE                                                \
@@ -468,7 +468,7 @@
     }
 #elif defined(_MSC_VER) && !defined(__INTEL_COMPILER)
   #define ASMJIT_BEGIN_NAMESPACE                                              \
-    namespace asmjit {                                                        \
+    namespace asmjitself {                                                        \
       __pragma(warning(push))                                                 \
       __pragma(warning(disable: 4127)) /* conditional expression is constant*/\
       __pragma(warning(disable: 4201)) /* nameless struct/union             */
@@ -478,7 +478,7 @@
 #endif
 
 #if !defined(ASMJIT_BEGIN_NAMESPACE) && !defined(ASMJIT_END_NAMESPACE)
-  #define ASMJIT_BEGIN_NAMESPACE namespace asmjit {
+  #define ASMJIT_BEGIN_NAMESPACE namespace asmjitself {
   #define ASMJIT_END_NAMESPACE }
 #endif
 
@@ -550,7 +550,7 @@
 
 // IDE: Make sure '#ifdef'ed unit tests are properly highlighted.
 #if defined(__INTELLISENSE__) && !defined(ASMJIT_BUILD_TEST)
-  #define ASMJIT_BUILD_TEST
+  //#define ASMJIT_BUILD_TEST
 #endif
 
 // IDE: Make sure '#ifdef'ed unit tests are not disabled by IDE.

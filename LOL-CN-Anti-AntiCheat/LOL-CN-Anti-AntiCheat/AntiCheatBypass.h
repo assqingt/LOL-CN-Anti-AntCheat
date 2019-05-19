@@ -6,5 +6,6 @@ class AntiCheatBypass
 public:
 	AntiCheatBypass();
 	~AntiCheatBypass();
+	void EnableDebug();
 };
 

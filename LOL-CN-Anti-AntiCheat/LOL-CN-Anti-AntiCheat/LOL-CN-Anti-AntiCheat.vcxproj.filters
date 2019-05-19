@@ -61,6 +61,12 @@
     <Filter Include="BaseLib\asmjit\x86">
       <UniqueIdentifier>{d7404cf6-9398-481b-afe1-0cea3b6e5c3c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ThirdParty">
+      <UniqueIdentifier>{34e55b77-35c7-429e-8699-5042a45e9ff8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\BlackBone">
+      <UniqueIdentifier>{870c180c-88ac-44f0-8c37-ea29db85d340}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">

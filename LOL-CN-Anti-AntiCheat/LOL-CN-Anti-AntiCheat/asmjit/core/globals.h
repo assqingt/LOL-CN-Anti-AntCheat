@@ -370,7 +370,7 @@ ASMJIT_API void ASMJIT_NORETURN assertionFailed(const char* file, int line, cons
   do {                                                                         \
     if (ASMJIT_LIKELY(EXP))                                                    \
       break;                                                                   \
-    ::asmjit::DebugUtils::assertionFailed(__FILE__, __LINE__, #EXP);           \
+    ::asmjitself::DebugUtils::assertionFailed(__FILE__, __LINE__, #EXP);           \
   } while (0)
 #else
 #define ASMJIT_ASSERT(EXP) ((void)0)
@@ -379,7 +379,7 @@ ASMJIT_API void ASMJIT_NORETURN assertionFailed(const char* file, int line, cons
 //! Used by AsmJit to propagate a possible `Error` produced by `...` to the caller.
 #define ASMJIT_PROPAGATE(...)               \
   do {                                      \
-    ::asmjit::Error _err = __VA_ARGS__;     \
+    ::asmjitself::Error _err = __VA_ARGS__;     \
     if (ASMJIT_UNLIKELY(_err))              \
       return _err;                          \
   } while (0)
